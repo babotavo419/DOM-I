@@ -38,5 +38,46 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
     "accent-img": "http://localhost:9000/img/accent.png",
   },
 };
+//IMAGES
+const logoImg = document.querySelector('#logo-img')
+logoImg.src = siteContent.images['logo-img']
 
-console.log('project wired!')
+const ctaImg = document.querySelector('#cta-img')
+ctaImg.src = siteContent.images['cta-img']
+
+const midImg = document.querySelector('#middle-img')
+midImg.setAttribute('src', siteContent.images['accent-img'])
+
+//FOOTER LINK
+
+const footerLink = document.querySelector('footer a')
+footerLink.textContent = siteContent.footer.copyright
+footerLink.classList.add('bold')
+
+//CONTACT
+const contact = document.querySelector('section.contact')
+contact.children[0].textContent = siteContent.contact['contact-h4']
+contact.children[1].textContent = siteContent.contact['address']
+contact.children[2].textContent = siteContent.contact['phone']
+contact.children[3].textContent = siteContent.contact['email']
+
+//Top CONTENT
+const topContent = document.querySelector('.top-content')
+topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content']
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4']
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content']
+
+//BOTTOM CONTENT
+const bottomContent = document.querySelector('.bottom-content')
+bottomContent.children[0].children[0].textContent = siteContent['main-content']['vision-h4']
+bottomContent.children[0].children[1].textContent = siteContent['main-content']['vision-content']
+bottomContent.children[1].children[0].textContent = siteContent['main-content']['services-h4']
+bottomContent.children[1].children[1].textContent = siteContent['main-content']['services-content']
+bottomContent.children[2].children[0].textContent = siteContent['main-content']['product-h4']
+bottomContent.children[2].children[1].textContent = siteContent['main-content']['product-content']
+
+
+
+
+
